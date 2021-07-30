@@ -1,0 +1,97 @@
+$mobile-width: 425px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin flex($dir: false, $jus: false, $ali: false) {
+  display: flex;
+  @if $dir {
+    flex-direction: $dir;
+  }
+  @if $jus {
+    justify-content: $jus;
+  }
+  @if $ali {
+    align-items: $ali;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin menu() {
+  ul {
+    height: 100%;
+    li {
+      padding: 0 0.75rem;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        color: var(--text-primary-color);
+        text-decoration: none;
+      }
+    }
+    @content;
+  }
+}
+
+@mixin menuHorizontal() {
+  ul {
+    height: auto;
+    padding: 1rem 0;
+    li {
+      height: auto;
+      padding: 0 1rem;
+      display: inherit;
+      a {
+        color: var(--text-primary-color);
+        text-decoration: none;
+      }
+    }
+    @content;
+  }
+}
+
+@mixin buttonBlue($p: 0.75rem 1.375rem, $r: 100px) {
+  background-color: var(--button-blue-color);
+  color: var(--color-white) !important;
+  border-radius: $r;
+  padding: $p;
+  &:hover {
+    background-color: var(--button-blue-hover-color);
+  }
+}
+
+@mixin titleSection() {
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-extra);
+  margin-top: 0;
+  letter-spacing: 8px;
+  transform: translate(-70%, 500%) rotate(-90deg);
+  @include mobile() {
+    transform: translate(-60%, 500%) rotate(-90deg);
+  }
+  transform-origin: center;
+  @content;
+}
+
+@mixin globalLink() {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}

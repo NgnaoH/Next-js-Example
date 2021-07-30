@@ -1,0 +1,175 @@
+@import "./mixin";
+.details {
+  margin-top: 2rem;
+  .post-content {
+    .post-teaser {
+      width: 60%;
+      @include tablet {
+        width: 100%;
+      }
+      margin: 0 auto;
+      position: relative;
+      &::after {
+        position: absolute;
+        right: 50%;
+        bottom: -20px;
+        left: 50%;
+        width: calc(100vw - 40px);
+        height: 80%;
+        max-height: 340px;
+        margin: 0 calc(-50vw + 20px);
+        content: "";
+        pointer-events: none;
+        background-color: var(--color-white);
+        -webkit-mask-image: linear-gradient(
+          rgb(0, 0, 0, 0) 0,
+          rgba(0, 0, 0, 0.013) 8.1%,
+          rgba(0, 0, 0, 0.049) 15.5%,
+          rgba(0, 0, 0, 0.104) 22.5%,
+          rgba(0, 0, 0, 0.175) 29%,
+          rgba(0, 0, 0, 0.259) 35.3%,
+          rgba(0, 0, 0, 0.352) 41.2%,
+          rgba(0, 0, 0, 0.45) 47.1%,
+          rgba(0, 0, 0, 0.55) 52.9%,
+          rgba(0, 0, 0, 0.648) 58.8%,
+          rgba(0, 0, 0, 0.741) 64.7%,
+          rgba(0, 0, 0, 0.825) 71%,
+          rgba(0, 0, 0, 0.896) 77.5%,
+          rgba(0, 0, 0, 0.951) 84.5%,
+          rgba(0, 0, 0, 0.987) 91.9%,
+          #000 100%
+        );
+        mask-image: linear-gradient(
+          transparent 0%,
+          rgba(0, 0, 0, 0.013) 8.1%,
+          rgba(0, 0, 0, 0.049) 15.5%,
+          rgba(0, 0, 0, 0.104) 22.5%,
+          rgba(0, 0, 0, 0.175) 29%,
+          rgba(0, 0, 0, 0.259) 35.3%,
+          rgba(0, 0, 0, 0.352) 41.2%,
+          rgba(0, 0, 0, 0.45) 47.1%,
+          rgba(0, 0, 0, 0.55) 52.9%,
+          rgba(0, 0, 0, 0.648) 58.8%,
+          rgba(0, 0, 0, 0.741) 64.7%,
+          rgba(0, 0, 0, 0.825) 71%,
+          rgba(0, 0, 0, 0.896) 77.5%,
+          rgba(0, 0, 0, 0.951) 84.5%,
+          rgba(0, 0, 0, 0.987) 91.9%,
+          #000 100%
+        );
+      }
+    }
+    p {
+      font-size: 1.2rem;
+      color: var(--color-font-one);
+    }
+    blockquote {
+      font-size: 2rem;
+      font-weight: var(--font-weight-extra);
+      position: relative;
+      width: 100%;
+      margin: 3rem auto;
+      padding-left: 4rem;
+      &::before {
+        font-size: 8rem;
+        position: absolute;
+        top: -28px;
+        left: -8px;
+        content: '"';
+        color: var(--button-blue-color);
+      }
+    }
+    .post-lock {
+      width: 60%;
+      @include tablet {
+        width: 100%;
+      }
+      margin: 3rem auto;
+      border-radius: var(--border-blog-radius);
+      padding: 5%;
+      text-align: center;
+      h2 {
+        font-size: 2.5rem;
+        font-weight: var(--font-weight-extra);
+        color: var(--color-font-one);
+      }
+      p {
+        font-size: 1.2rem;
+        color: var(--color-font-one);
+        font-weight: 300;
+      }
+      .button-sign-up {
+        @include buttonBlue();
+        display: inline-block;
+        margin-bottom: 1rem;
+        font-weight: var(--font-weight-extra);
+        padding: 1.25rem 1.75rem;
+        font-size: 1rem;
+      }
+      .question {
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 0.75rem;
+        a {
+          color: var(--text-primary-color);
+          font-weight: var(--font-weight-normal);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.nav-post {
+  margin: 3rem 0;
+  cursor: pointer;
+  .nav-wrap {
+    transition: all 0.3s ease;
+    &:hover {
+      transition: all 0.3s ease;
+      transform: translateY(-5px);
+    }
+    .nav {
+      padding: 1rem;
+      border-radius: var(--border-blog-radius);
+      display: flex;
+      &.nav-older {
+        flex-direction: row-reverse;
+        .nav-content {
+          text-align: end;
+        }
+      }
+      .image {
+        .image-wrapper {
+          width: 100px;
+          height: 100px;
+          position: relative;
+          border-radius: 1rem;
+          overflow: hidden;
+        }
+      }
+      .nav-content {
+        padding: 0 1rem;
+        height: 100px;
+        overflow: hidden;
+        @include flex($dir: column);
+        small {
+          margin: 0.5rem 0;
+          font-size: 0.75rem;
+          color: var(--text-primary-color);
+          font-weight: var(--font-weight-normal);
+          display: inline-block;
+        }
+        h3 {
+          font-size: 1.25rem;
+          color: var(--text-primary-color);
+          font-weight: var(--font-weight-normal);
+          line-height: 1.2;
+          margin-bottom: 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

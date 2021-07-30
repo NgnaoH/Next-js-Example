@@ -1,0 +1,129 @@
+@import "./mixin";
+
+.header {
+  margin: 2rem auto;
+  @include tablet() {
+  }
+  @include mobile() {
+  }
+  @media (min-width: 1400px) {
+    max-width: none;
+    padding: 0 5rem;
+  }
+  &-wrapper {
+    position: relative;
+    @include flex($jus: space-between);
+    @include tablet() {
+      @include flex($jus: flex-end);
+    }
+    .navbar-left {
+      @include menu() {
+        @include flex($ali: center);
+      }
+      @include tablet() {
+        display: none;
+      }
+    }
+    .navbar-center {
+      @include flex($ali: center);
+      position: absolute;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include tablet() {
+        left: 0;
+        transform: none;
+      }
+    }
+    .navbar-right {
+      @include menu() {
+        @include flex($ali: center);
+      }
+      @include tablet() {
+        display: none;
+      }
+    }
+    .navbar-mobile {
+      font-size: 2rem;
+      display: none;
+      position: relative;
+      @include tablet() {
+        @include flex($ali: center);
+        padding: 0.5rem 0;
+      }
+      .navbar {
+        @include menuHorizontal() {
+          margin: 0;
+          padding-bottom: 0;
+          @include flex($dir: column, $ali: flex-end);
+          li {
+            padding: 0.25rem 1rem;
+          }
+        }
+        .button-sign-up {
+          padding: 0.375rem 0.625rem;
+          margin-right: -0.5rem;
+        }
+        .button-search {
+          background-color: var(--button-blue-color);
+          padding: 0.75rem 1rem;
+          width: 100%;
+          justify-content: flex-end;
+          color: var(--color-white);
+          font-weight: var(--font-weight-extra);
+          font-size: 1rem;
+          margin-top: 0.5rem;
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+    a {
+      font-size: 1.25rem;
+      @media (max-width: 1200px) {
+        font-size: 1rem;
+      }
+      font-weight: var(--font-weight-extra);
+    }
+    .button-dropdown {
+      font-size: 3rem;
+      cursor: pointer;
+      color: var(--text-primary-color);
+      position: relative;
+      .menu-extra {
+        @include menuHorizontal() {
+          padding: 1rem;
+          li {
+            padding: 0.25rem 0.5rem;
+          }
+          @include flex($dir: column, $ali: flex-start);
+        }
+      }
+    }
+    .button-search {
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+    .button-sign-up {
+      @include buttonBlue();
+    }
+    .logo {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      height: 50%;
+      width: 120px;
+      @include tablet() {
+        height: 40px;
+        width: 100px;
+      }
+    }
+  }
+}
+.logo {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}

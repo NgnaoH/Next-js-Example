@@ -1,0 +1,51 @@
+@import "./mixin";
+
+.blog-item-sm {
+  position: relative;
+  .item-wrapper {
+    padding: 1rem;
+    border-radius: var(--border-blog-radius);
+    .global-link {
+      @include globalLink();
+    }
+    .item-content {
+      padding: 0 8%;
+      @include mobile() {
+        padding: 0;
+      }
+      h3 {
+        font-size: 1.25rem;
+        font-weight: var(--font-weight-extra);
+        margin: 0.75rem 0 .5rem;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: var(--font-weight-low);
+        color: var(--text-primary-color);
+        a {
+          font-weight: var(--font-weight-normal);
+          z-index: 100;
+          position: relative;
+          color: var(--text-primary-color);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        @include tablet() {
+          display: none;
+        }
+      }
+    }
+    .image-wrapper {
+      position: relative;
+      padding-top: 100%;
+      border-radius: calc(var(--border-blog-radius) / 2);
+      overflow: hidden;
+    }
+  }
+  transition: 0.3s ease;
+  &:hover {
+    transition: 0.3s ease;
+    transform: translateY(-5px);
+  }
+}

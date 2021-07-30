@@ -1,0 +1,108 @@
+:root {
+  --text-primary-color: #2b394e;
+  --font-weight-extra: 900;
+  --font-weight-normal: 800;
+  --font-weight-low: 600;
+  --color-white: #fff;
+  --text-color-hover: #b8b8bd;
+  --color-grey: #ededf1;
+  --button-blue-color: #646eff;
+  --button-blue-hover-color: #4d56d8;
+  --border-blog-radius: 1.5rem;
+  --color-pool: #d7f8ff;
+  --color-rose: #fce6f0;
+  --color-sand: #ffeab9;
+  --color-aqua: #d2f8f0;
+  --color-peach: #fddfd8;
+  --color-transparent: rgba(0, 0, 0, 0.06);
+  --color-transparent-hover: rgba(0, 0, 0, 0.1);
+  --bg-transparent: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  width: 100%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin: 0 auto;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+}
+
+input,
+textarea {
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.text-hover {
+  .effect {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 999px;
+      background-color: var(--text-color-hover);
+      transform: translateX(100%);
+      transition: all 0.2s ease;
+      opacity: 0;
+    }
+  }
+  &:hover {
+    .effect {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  &.active {
+    .effect {
+      &::after {
+        background-color: var(--button-blue-color);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.bg-pool {
+  background-color: var(--color-pool);
+}
+.bg-peach {
+  background-color: var(--color-peach);
+}
+.bg-sand {
+  background-color: var(--color-sand);
+}
+.bg-aqua {
+  background-color: var(--color-aqua);
+}
+.bg-rose {
+  background-color: var(--color-rose);
+}

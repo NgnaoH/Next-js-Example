@@ -1,0 +1,19 @@
+@import "./mixin";
+
+.feature-section {
+  margin: 4rem 1rem 0;
+  color: var(--color-font-one);
+  position: relative;
+  @include flex($jus: space-between, $ali: flex-start);
+  flex-wrap: wrap;
+  @include tablet() {
+    align-items: stretch;
+  }
+  .title-section {
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    @include titleSection() {
+    }
+  }
+}

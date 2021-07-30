@@ -1,0 +1,42 @@
+@import "./mixin";
+
+.form-auth {
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-extra);
+    color: var(--color-font-one);
+    margin-bottom: 2rem;
+
+  }
+  input {
+    font-size: 20px;
+    padding: 1.5rem 0;
+    margin: 1rem 0 3rem;
+    transition: background-color 0.15s ease;
+    text-align: center;
+    word-break: break-all;
+    width: 80%;
+    border-radius: 100px;
+    background-color: var(--color-grey);
+  }
+  button {
+    @include buttonBlue();
+    padding: 1.25rem 1.75rem;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .question {
+    a {
+      color: var(--text-primary-color);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

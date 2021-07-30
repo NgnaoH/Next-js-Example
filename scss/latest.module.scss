@@ -1,0 +1,27 @@
+@import "./mixin";
+
+.loop-section {
+  margin: 5rem 1rem 0;
+  color: var(--color-font-one);
+  position: relative;
+  .title-section {
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    @include titleSection() {
+    }
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    @include flex($jus: center);
+    .button-loadmore {
+      @include buttonBlue();
+      font-size: 1.2rem;
+      user-select: none;
+      padding: 1.5rem 1.5rem 1.25rem;
+      font-weight: var(--font-weight-extra);
+    }
+  }
+}

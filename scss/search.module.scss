@@ -1,0 +1,64 @@
+@import "./mixin";
+
+.modal-search {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  background-color: var(--bg-transparent);
+  opacity: 0;
+  transition: all 0.2s ease;
+  @include flex($jus: center);
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .close {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    .button-close {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 3%;
+      padding-right: 5%;
+      color: var(--color-white);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+  .search-box {
+    @include flex($dir: column, $ali: center);
+    width: 65%;
+    position: fixed;
+    z-index: 1001;
+    margin-top: 12%;
+    .search-form {
+      width: 100%;
+      border-radius: var(--border-blog-radius);
+      overflow: hidden;
+      height: 100%;
+      input {
+        width: 100%;
+        background-color: var(--color-grey);
+        font-size: 2rem;
+        font-weight: var(--font-weight-extra);
+        padding: 2rem 1.5rem;
+        color: var(--text-primary-color);
+      }
+      .search-meta {
+        font-size: 0.5rem;
+        font-weight: var(--font-weight-normal);
+        letter-spacing: 3px;
+        color: var(--color-white);
+        text-transform: uppercase;
+        background-color: var(--button-blue-color);
+        padding: 0.75rem 1.5rem;
+      }
+    }
+  }
+}
