@@ -9,7 +9,6 @@ export const blogSagas = {
       const response = yield call(ApiServiceBlog.getBlogs);
       blogs = yield response.data;
       yield put(getBlogsSuccess(blogs));
-      return blogs
     } catch (err) {
       yield put(getBlogsFailure(err));
     }
