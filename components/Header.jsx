@@ -37,6 +37,17 @@ const Header = () => {
   const toggleMenuDropdown = () => {
     dispatch({ type: UTILS.TOGGLE_MENU_DROPDOWN });
   };
+  useEffect(() => {
+    const closeDropdown = () => {
+      if (isShowExtraDropdown || isShowMenuDropdown) {
+        dispatch({ type: UTILS.CLOSE_DROPDOWN });
+      }
+    };
+    document.addEventListener("mousedown", closeDropdown);
+    return () => {
+      document.removeEventListener("mousedown", closeDropdown);
+    };
+  });
 
   return (
     <header className={`${classes["header"]} container`}>
