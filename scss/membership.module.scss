@@ -1,0 +1,101 @@
+@import "./mixin";
+.membership-section {
+  position: relative;
+  padding: 10vh 5%;
+  background: url(../public/images/bg3.jpeg) no-repeat center;
+  overflow: hidden;
+  background-size: cover;
+  border-radius: calc(var(--border-blog-radius) * 2);
+  .archive-wrap {
+    .archive-container {
+      padding: 1.5rem 2.5rem;
+      max-width: 350px;
+      background-color: var(--color-white);
+      border-radius: var(--border-blog-radius);
+      .archive-title {
+        font-size: 2.5rem;
+        font-weight: var(--font-weight-extra);
+        color: var(--color-font-one);
+        word-break: break-all;
+        margin-bottom: 1.5rem;
+      }
+      .archive-description {
+        font-weight: var(--font-weight-normal);
+      }
+    }
+  }
+}
+
+.membership-heading {
+  font-size: 1.5rem;
+  color: var(--color-font-one);
+  font-weight: var(--font-weight-normal);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+.membership-cards {
+  .membership-card {
+    padding: 1rem;
+    .card-wrapper {
+      background: var(--color-grey);
+      height: 100%;
+      border-radius: var(--border-blog-radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h2 {
+        background: var(--button-blue-color);
+        padding: 0.75rem 1rem;
+        color: var(--color-white);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 0.75rem;
+        font-weight: var(--font-weight-normal);
+        text-align: center;
+      }
+      h3 {
+        font-size: 7rem;
+        margin: 2rem 0;
+        text-align: center;
+        font-weight: var(--font-weight-extra);
+        color: var(--color-font-one);
+        text-indent: -20px;
+      }
+      sup {
+        font-size: 50%;
+        vertical-align: center;
+      }
+      li {
+        text-align: center;
+        margin: 1rem 0;
+      }
+      .card-action {
+        margin: 2rem 0 2rem;
+        text-align: center;
+        button {
+          @include buttonBlue();
+          padding: 1.5rem 2rem;
+          font-size: 1.2rem;
+          font-weight: var(--font-weight-extra);
+        }
+      }
+    }
+  }
+}
+.question {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0 5rem;
+  font-size: .75rem;
+  a {
+    color: var(--text-primary-color);
+    font-weight: var(--font-weight-normal);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

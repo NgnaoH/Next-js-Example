@@ -1,0 +1,83 @@
+@import "./mixin";
+
+.blog-preview {
+  margin-bottom: 3rem !important;
+  .image-container {
+    .image-wrapper {
+      position: relative;
+      padding-top: 100%;
+      border-radius: 2.5rem;
+      overflow: hidden;
+    }
+  }
+  .content-wrapper {
+    padding: 3rem 0;
+    padding-left: 3rem !important;
+    @include tablet {
+      padding: 3rem 1rem !important;
+    }
+    .item-tags {
+      margin-bottom: 1rem;
+    }
+    .item-title {
+      font-size: 3.5rem;
+      color: var(--text-primary-color);
+      font-weight: var(--font-weight-extra);
+      letter-spacing: 1px;
+      line-height: 1.2;
+      @media (max-width: 1200px) {
+        font-size: 3rem;
+      }
+      span {
+        width: 1rem;
+        height: 1rem;
+        &::after {
+          top: 10%;
+          background-color: var(--button-blue-color);
+        }
+      }
+    }
+    .item-excerpt {
+      margin-top: 3rem;
+      font-size: 1rem;
+      font-weight: var(--font-weight-normal);
+      margin-bottom: 1rem;
+      color: var(--text-primary-color);
+      @media (max-width: 1200px) and (min-width: 987px) {
+        display: none;
+      }
+    }
+    .item-meta {
+      .profile-image {
+        width: auto;
+        margin: 1rem;
+        margin-right: 2rem;
+        margin-left: 0;
+        .authors-image {
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          width: 40px;
+          height: 40px;
+          margin-right: -1rem;
+          border: 2px solid var(--color-white);
+          border-radius: 100px;
+          &:first-child {
+            z-index: 10;
+          }
+        }
+      }
+      .authors {
+        margin: 1rem;
+        margin-left: 0;
+        a {
+          color: var(--text-primary-color);
+          font-weight: var(--font-weight-normal);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

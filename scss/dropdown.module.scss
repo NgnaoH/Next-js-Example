@@ -1,0 +1,20 @@
+.dropdown {
+  position: absolute;
+  background-color: var(--color-grey);
+  border-radius: 1rem;
+  width: 300%;
+  top: 70%;
+  left: -10%;
+  display: none;
+  z-index: 1000;
+  overflow: hidden;
+  &.active {
+    display: block;
+  }
+  &.menu-mobile {
+    top: 100%;
+    left: unset;
+    right: 0;
+    width: 200px;
+  }
+}

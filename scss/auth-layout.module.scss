@@ -1,0 +1,30 @@
+@import "./mixin";
+.custom-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  .custom-image {
+    background: no-repeat center center/cover;
+    height: 100%;
+    @include tablet() {
+      display: none;
+    }
+  }
+  .custom-container {
+    display: flex;
+    flex-direction: column;
+    .custom-logo {
+      width: 100%;
+      .logo {
+        position: relative;
+        margin: 8vh auto;
+        width: 100px;
+        height: 40px;
+      }
+    }
+    .custom-content {
+      flex: 1;
+    }
+  }
+}

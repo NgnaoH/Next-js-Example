@@ -1,0 +1,94 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "src": "/images/5.jpeg",
+      "background": "pool",
+      "title": "I work best when my space is filled with inspiration",
+      "authors": ["Victoria West", "Lauren Lanford"],
+      "section": [""],
+      "tags": ["creative", "idea", "product"],
+      "lock": false
+    },
+    {
+      "id": "2",
+      "src": "/images/1.jpeg",
+      "background": "pool",
+      "title": "Don't be afraid",
+      "authors": ["Megan Anderson", "Lauren Lanford"],
+      "section": ["features", "story"],
+      "tags": ["story"],
+      "lock": false
+    },
+    {
+      "id": "3",
+      "src": "/images/6.jpeg",
+      "background": "aqua",
+      "title": "Anyone can hold the helm when the sea is calm",
+      "authors": ["Megan Anderson", "Charles Barrett"],
+      "section": ["story"],
+      "tags": ["Home"],
+      "lock": true
+    },
+    {
+      "id": "4",
+      "src": "/images/2.jpeg",
+      "background": "rose",
+      "title": "You have to fight to reach your dream",
+      "authors": ["Megan Anderson"],
+      "section": ["features"],
+      "tags": ["product"],
+      "lock": false
+    },
+    {
+      "id": "5",
+      "src": "/images/7.jpeg",
+      "background": "peach",
+      "title": "Cuisine is a mirror, reflecting the culture",
+      "authors": ["Victoria West, Patricia Jenkins"],
+      "section": ["story"],
+      "tags": ["creative"],
+      "lock": false
+    },
+    {
+      "id": "6",
+      "src": "/images/8.jpeg",
+      "background": "sand",
+      "title": "Being the unique is better than being perfect",
+      "authors": ["Megan Anderson"],
+      "section": [""],
+      "tags": ["Home"],
+      "lock": false
+    },
+    {
+      "id": "7",
+      "src": "/images/3.jpeg",
+      "background": "sand",
+      "title": "I always loved aesthetics",
+      "authors": ["Hannah Weastell", "Victoria West"],
+      "section": ["features", "story"],
+      "tags": ["Home"],
+      "lock": true
+    },
+    {
+      "id": "8",
+      "src": "/images/4.jpeg",
+      "background": "aqua",
+      "title": "Creating deluxe drink is like playing a sport",
+      "authors": ["Victoria West"],
+      "section": ["features"],
+      "tags": ["lifestyle"],
+      "lock": false
+    },
+    {
+      "id": "9",
+      "src": "/images/9.jpeg",
+      "background": "peach",
+      "title": "You must grow like a tree",
+      "authors": ["Patricia Jenkins", "Charles Barrett"],
+      "section": [],
+      "tags": ["creative"],
+      "lock": false
+    }
+  ]
+}

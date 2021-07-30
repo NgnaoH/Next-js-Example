@@ -1,0 +1,9 @@
+{
+  "locales": ["en", "vi"],
+  "defaultLocale": "en",
+  "pages": {
+    "*": ["common"],
+    "/about": ["about"],
+    "/": ["home"]
+  }
+}
