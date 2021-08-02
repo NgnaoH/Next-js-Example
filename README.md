@@ -2,7 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, Install pakage:
+
+```
+yarn
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -10,7 +16,7 @@ npm run dev
 yarn dev
 ```
 
-Second, run server json: 
+Then, run server json: 
 ```
 yarn api
 ```
